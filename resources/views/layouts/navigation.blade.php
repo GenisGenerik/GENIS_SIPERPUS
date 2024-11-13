@@ -8,6 +8,7 @@
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                     </a>
+                    
                 </div>
 
                 <!-- Navigation Links -->
@@ -15,6 +16,21 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @hasrole('mahasiswa')
+                        <x-nav-link :href="route('book')" :active="request()->routeIs('book')">
+                            {{ __('List Buku') }}
+                        </x-nav-link>
+                    @endhasrole
+                    
+                    @hasrole('pustakawan')
+                        <x-nav-link :href="route('book')" :active="request()->routeIs('book')">
+                            {{ __('List Buku') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('book')" :active="request()->routeIs('book')">
+                            {{ __('List User') }}
+                        </x-nav-link>
+                    @endhasrole
                 </div>
             </div>
 
