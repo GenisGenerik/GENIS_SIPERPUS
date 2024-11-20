@@ -49,9 +49,9 @@
                                 <option value="">Open this select menu</option>
                                 @foreach ($bookshelf as $key => $value)
                                     @if (old('bookshelf_id') == $key)
-                                        <option value="{{ $key }}" selected>{{ $value->code.' 😊 '.$value->name }}</option>
+                                        <option value="{{ $key }}" selected>{{ $value->code.' 🐔 '.$value->name }}</option>
                                     @else
-                                        <option value="{{ $key }}" selected>{{ $value->code.' 😊 '.$value->name }}</option>
+                                        <option value="{{ $key }}" selected>{{ $value->code.' 🐔 '.$value->name }}</option>
                                     @endif
                                 @endforeach
                             </x-select-input>

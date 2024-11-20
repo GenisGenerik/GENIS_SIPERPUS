@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Book extends Model
 {
-    protected $filltable=[
+    protected $fillable=[
         'title',
         'author',
         'year',

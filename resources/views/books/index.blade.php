@@ -37,7 +37,7 @@
                                 <td>
                                     <img src="{{ asset('storage/cover_buku/' . $book->cover) }}" width="100px" />
                                 </td>
-                                <td>{{ $book->bookshelf->code }}-{{ $book->bookshelf->name }}</td>
+                                <td>{{ $book->bookshelf->code }}🐱‍🏍{{ $book->bookshelf->name }}</td>
                                 <td>
                                     <x-primary-button tag="a"
                                         href="{{ route('book.edit', $book->id) }}">Edit</x-primary-button>
